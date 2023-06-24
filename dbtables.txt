@@ -1,0 +1,12 @@
+create database flavoursome;
+use flavoursome;
+create table admin(username varchar(40),pwd varchar(40));
+insert into admin values('admin','admin');
+
+create table userdetails(username varchar(40),pwd varchar(40),emilid varchar(40),cno varchar(30),address text,status int);
+
+
+create table adminrecipe(name text,ingredients text,making text,type text,category text);
+
+create table ownrecipes(iname text,cost text,type text,category text);
+ 

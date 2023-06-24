@@ -1,0 +1,17 @@
+<%@include file="DBConn.jsp" %>
+<%
+String name=request.getParameter("name");
+String ingredients=request.getParameter("ingredients");
+String making=request.getParameter("making");
+String type=request.getParameter("type");
+String category=request.getParameter("category");
+PreparedStatement pst=con.prepareStatement("insert into	adminrecipe	 values(?,?,?,?,?)");
+pst.setString(1,name);pst.setString(2,ingredients);
+pst.setString(3,making);pst.setString(4,type);
+pst.setString(5,category);
+int i=pst.executeUpdate();
+%>
+<script>
+alert("Recipe added")
+window.location="adminhome.jsp"
+</script>
